@@ -23,27 +23,27 @@ library(countdown)
 
 ## Goals
 
--   Meet your team!
--   Ice breaker / get to know your team
--   Team agreement
--   Lab 3 - Coffee ratings
+- Meet your team!
+- Ice breaker / get to know your team
+- Team agreement
+- Lab 3 - Coffee ratings
 
 ## Meet your team!
 
--   [**Click here**](https://github.com/sta210-s22/teams/blob/master/teams.csv) to find your team.
+- [**Click here**](https://github.com/sta210-s22/teams/blob/master/teams.csv) to find your team.
 
--   Sit with your team.
+- Sit with your team.
 
 ## Icebreaker
 
--   Quick introductions: Name and hometown
+- Quick introductions: Name and hometown
 
--   Choose a reporter: The person whose birthday is closest to January 31
+- Choose a reporter: The person whose birthday is closest to January 31
 
--   Identify 8 things everyone in the group has in common:
+- Identify 8 things everyone in the group has in common:
 
-    -   Not clothes, e.g., we're all wearing shoes!
-    -   Not body parts, e.g., we all have a nose!
+  - Not clothes, e.g., we're all wearing shoes!
+  - Not body parts, e.g., we all have a nose!
 
 ```{r}
 countdown(minutes = 5, font_size = "2em")
@@ -51,33 +51,30 @@ countdown(minutes = 5, font_size = "2em")
 
 ## Team name + agreement
 
--   Come up with a team name.
-    You can't have the same name as another group in the class, so be creative!
+- Come up with a team name. You can't have the same name as another group in the class, so be creative!
 
-    -   Your TA will get your team name by the end of lab.
+  - Your TA will get your team name by the end of lab.
 
--   Fill out the team agreement.
-    The goals of the agreement are to...
+- Fill out the team agreement. The goals of the agreement are to...
 
-    -   Gain a common understanding of the team's goals and expectations for collaboration
-    -   Make a plan for team communication
-    -   Make a plan for working outside of lab
+  - Gain a common understanding of the team's goals and expectations for collaboration
+  - Make a plan for team communication
+  - Make a plan for working outside of lab
 
 ## Team workflow
 
--   Only one team member should type at a time.
-    There are markers in today's lab to help you determine whose turn it is to type.
+- Only one team member should type at a time. There are markers in today's lab to help you determine whose turn it is to type.
 
-    -   Every team member should still be engaged in discussion for all questions, even if it's not your turn type.
+  - Every team member should still be engaged in discussion for all questions, even if it's not your turn type.
 
--   Don't forget to **pull** to get your teammates' updates before making changes to the `.qmd` file.
+- Don't forget to **pull** to get your teammates' updates before making changes to the `.qmd` file.
 
--   Only **one** submission for the team on Gradescope.
+- Only **one** submission for the team on Gradescope.
 
 ## Team workflow, in action
 
--   Complete the "Workflow: Using Git and GitHub as a team" section of the lab in your teams.
--   When done, pause and wait for your TA to walk you through the rest of the slides before continuing to the following section.
+- Complete the "Workflow: Using Git and GitHub as a team" section of the lab in your teams.
+- When done, pause and wait for your TA to walk you through the rest of the slides before continuing to the following section.
 
 ```{r}
 countdown(minutes = 10, font_size = "2em")
@@ -85,9 +82,9 @@ countdown(minutes = 10, font_size = "2em")
 
 ## Tips for working in a team
 
--   Do not pressure each other to finish early; use the time wisely to really learn the material and produce a quality report.
--   The labs are structured to help you learn the steps of a data analysis. Do not split up the lab among the team members; work on it together in its entirety.
--   Everyone has something to contribute! Use the lab groups as an opportunity to share ideas and learn from each other.
+- Do not pressure each other to finish early; use the time wisely to really learn the material and produce a quality report.
+- The labs are structured to help you learn the steps of a data analysis. Do not split up the lab among the team members; work on it together in its entirety.
+- Everyone has something to contribute! Use the lab groups as an opportunity to share ideas and learn from each other.
 
 # Model diagnostics
 
@@ -150,7 +147,7 @@ p_influential
 
 An observation is **influential** if removing it substantially changes the coefficients of the regression model.
 
-::: columns
+::::: columns
 ::: {.column width="50%"}
 ```{r}
 #| out.width: "100%"
@@ -166,15 +163,15 @@ p_data
 p_influential
 ```
 :::
-:::
+:::::
 
 ## Influential points
 
--   Influential points have a large impact on the coefficients and standard errors used for inference
+- Influential points have a large impact on the coefficients and standard errors used for inference
 
--   These points can sometimes be identified in a scatterplot if there is only one predictor variable, this is often not the case when there are multiple predictors
+- These points can sometimes be identified in a scatterplot if there is only one predictor variable, this is often not the case when there are multiple predictors
 
--   We will use measures to quantify an individual observation's influence on the regression model: **leverage**, **standardized residuals**, and **Cook's distance**
+- We will use measures to quantify an individual observation's influence on the regression model: **leverage**, **standardized residuals**, and **Cook's distance**
 
 ## Remember `augment()`?
 
@@ -193,12 +190,12 @@ augment(mtcars_fit$fit)
 Use the `augment()` function to output statistics that can be used to diagnose the model, along with the predicted values and residuals:
 
 ::: nonincremental
--   outcome and predictor variables in the model
--   **`.fitted`**: predicted values
--   **`.se.fit`**: standard errors of predicted values
--   **`.resid`**: residuals
--   **`.hat`**: leverage
--   **`.sigma`**: estimate of residual standard deviation when the corresponding observation is dropped from model
--   **`.cooksd`**: Cook's distance
--   **`.std.resid`**: standardized residuals
+- outcome and predictor variables in the model
+- **`.fitted`**: predicted values
+- **`.se.fit`**: standard errors of predicted values
+- **`.resid`**: residuals
+- **`.hat`**: leverage
+- **`.sigma`**: estimate of residual standard deviation when the corresponding observation is dropped from model
+- **`.cooksd`**: Cook's distance
+- **`.std.resid`**: standardized residuals
 :::

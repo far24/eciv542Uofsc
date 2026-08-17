@@ -34,24 +34,24 @@ knitr::opts_chunk$set(
 
 ## Announcements
 
--   New on the course website: [FAQ](/course-faq.html)
--   New communication tool: Slack
-    -   Find the invite link in your inbox / on Sakai announcements
-    -   Use #general for questions, #random for random 🤪
-    -   Use code formatting for for questions involving code (see Course FAQ for a demo video)
--   My office hours: All virtual for now, hope to move 1 hour / week to in person later in the semester
+- New on the course website: [FAQ](/course-faq.html)
+- New communication tool: Slack
+  - Find the invite link in your inbox / on Sakai announcements
+  - Use #general for questions, #random for random 🤪
+  - Use code formatting for for questions involving code (see Course FAQ for a demo video)
+- My office hours: All virtual for now, hope to move 1 hour / week to in person later in the semester
 
 ## Hybrid teaching {.smaller}
 
--   Lectures:
-    -   In person as long as university says so (and I don't have COVID)
-    -   If you can't be in class (and you're well enough to follow along), watch live (or the recording later) on [Panopto](https://duke.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx#folderID=%22d6c1d58a-cb6d-4732-9d4b-ae0c011bf767%22)
-    -   Watching live and have questions? Post on Slack!
-    -   In class and see someone ask a question on Slack? Please raise it to me!
--   Labs:
-    -   Not live streamed / recorded
-    -   Lab 2 (next Monday) - individual
-    -   Lab 3 onwards - in teams, if teammates are in isolation, set up team Zoom calls
+- Lectures:
+  - In person as long as university says so (and I don't have COVID)
+  - If you can't be in class (and you're well enough to follow along), watch live (or the recording later) on [Panopto](https://duke.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx#folderID=%22d6c1d58a-cb6d-4732-9d4b-ae0c011bf767%22)
+  - Watching live and have questions? Post on Slack!
+  - In class and see someone ask a question on Slack? Please raise it to me!
+- Labs:
+  - Not live streamed / recorded
+  - Lab 2 (next Monday) - individual
+  - Lab 3 onwards - in teams, if teammates are in isolation, set up team Zoom calls
 
 ## Computational setup
 
@@ -80,8 +80,8 @@ ggplot2::theme_set(ggplot2::theme_minimal(base_size = 16))
 
 ## Data source
 
--   The data come from [`usdata::county_2019`](https://openintrostat.github.io/usdata/reference/county_2019.html)
--   These data have been compiled from the 2019 American Community Survey
+- The data come from [`usdata::county_2019`](https://openintrostat.github.io/usdata/reference/county_2019.html)
+- These data have been compiled from the 2019 American Community Survey
 
 ```{r map-prep}
 # data prop for mapping
@@ -158,8 +158,8 @@ map_county_2019 %>%
 
 ## Examining the relationship
 
--   The [NC Labor and Economic Analysis Division (LEAD)](https://www.nc.gov/agency/labor-and-economic-analysis-division), which "administers and collects data, conducts research, and publishes information on the state's economy, labor force, educational, and workforce-related issues".
--   Suppose that an analyst working for LEAD is interested in the relationship between uninsurance and high school graduation rates in NC counties.
+- The [NC Labor and Economic Analysis Division (LEAD)](https://www.nc.gov/agency/labor-and-economic-analysis-division), which "administers and collects data, conducts research, and publishes information on the state's economy, labor force, educational, and workforce-related issues".
+- Suppose that an analyst working for LEAD is interested in the relationship between uninsurance and high school graduation rates in NC counties.
 
 . . .
 
@@ -244,12 +244,12 @@ nc_aug
 
 ## Visualizing the model I {.smaller}
 
-::: columns
-::: {.column width="25%"}
+:::::: columns
+:::: {.column width="25%"}
 ::: nonincremental
--   **Black circles:** Observed values (`y = uninsured`)
+- **Black circles:** Observed values (`y = uninsured`)
 :::
-:::
+::::
 
 ::: {.column width="75%"}
 ```{r}
@@ -264,17 +264,17 @@ p_nc_aug_base +
   geom_point(aes(y = uninsured))
 ```
 :::
-:::
+::::::
 
 ## Visualizing the model II {.smaller}
 
-::: columns
-::: {.column width="25%"}
+:::::: columns
+:::: {.column width="25%"}
 ::: nonincremental
--   Black circles: Observed values (`y = uninsured`)
--   **Pink solid line:** Least squares regression line
+- Black circles: Observed values (`y = uninsured`)
+- **Pink solid line:** Least squares regression line
 :::
-:::
+::::
 
 ::: {.column width="75%"}
 ```{r}
@@ -285,18 +285,18 @@ p_nc_aug_base +
   geom_smooth(aes(y = uninsured), method = "lm", se = FALSE, color = "pink")
 ```
 :::
-:::
+::::::
 
 ## Visualizing the model III {.smaller}
 
-::: columns
-::: {.column width="25%"}
+:::::: columns
+:::: {.column width="25%"}
 ::: nonincremental
--   Black circles: Observed values (`y = uninsured`)
--   Pink solid line: Least squares regression line
--   **Maroon triangles:** Predicted values (`y = .fitted`)
+- Black circles: Observed values (`y = uninsured`)
+- Pink solid line: Least squares regression line
+- **Maroon triangles:** Predicted values (`y = .fitted`)
 :::
-:::
+::::
 
 ::: {.column width="75%"}
 ```{r}
@@ -308,19 +308,19 @@ p_nc_aug_base +
   geom_point(aes(y = .fitted), color = "maroon", shape = "triangle", size = 2)
 ```
 :::
-:::
+::::::
 
 ## Visualizing the model IV {.smaller}
 
-::: columns
-::: {.column width="25%"}
+:::::: columns
+:::: {.column width="25%"}
 ::: nonincremental
--   Black circles: Observed values (`y = uninsured`)
--   Pink solid line: Least squares regression line
--   Maroon triangles: Predicted values (`y = .fitted`)
--   **Gray dashed lines:** Residuals
+- Black circles: Observed values (`y = uninsured`)
+- Pink solid line: Least squares regression line
+- Maroon triangles: Predicted values (`y = .fitted`)
+- **Gray dashed lines:** Residuals
 :::
-:::
+::::
 
 ::: {.column width="75%"}
 ```{r}
@@ -333,7 +333,7 @@ p_nc_aug_base +
   geom_point(aes(y = .fitted), color = "maroon", shape = "triangle", size = 2)
 ```
 :::
-:::
+::::::
 
 ## Evaluating the model fit
 
@@ -345,38 +345,32 @@ How can we evaluate whether the model for predicting uninsurance rate from high 
 
 ## Two statistics {.smaller}
 
--   **R-squared**, $R^2$ : Percentage of variability in the outcome explained by the regression model (in the context of SLR, the predictor)
+- **R-squared**, $R^2$ : Percentage of variability in the outcome explained by the regression model (in the context of SLR, the predictor)
 
-    $$
-    R^2 = Cor(x,y)^2 = Cor(y, \hat{y})^2
-    $$
+  $$R^2 = Cor(x,y)^2 = Cor(y, \hat{y})^2$$
 
--   **Root mean square error, RMSE**: A measure of the average error (average difference between observed and predicted values of the outcome)
+- **Root mean square error, RMSE**: A measure of the average error (average difference between observed and predicted values of the outcome)
 
-    $$
-    RMSE = \sqrt{\frac{\sum_{i = 1}^n (y_i - \hat{y}_i)^2}{n}}
-    $$
+  $$RMSE = \sqrt{\frac{\sum_{i = 1}^n (y_i - \hat{y}_i)^2}{n}}$$
 
 . . .
 
 ::: question
-What indicates a good model fit?
-Higher or lower $R^2$?
-Higher or lower RMSE?
+What indicates a good model fit? Higher or lower $R^2$? Higher or lower RMSE?
 :::
 
 ## R-squared {.smaller}
 
--   Ranges between 0 (terrible predictor) and 1 (perfect predictor)
+- Ranges between 0 (terrible predictor) and 1 (perfect predictor)
 
--   Unitless
+- Unitless
 
--   Calculate with `rsq()`:
+- Calculate with `rsq()`:
 
-    ```{r}
-    #| echo: true
-    rsq(nc_aug, truth = uninsured, estimate = .fitted)
-    ```
+  ```{r}
+  #| echo: true
+  rsq(nc_aug, truth = uninsured, estimate = .fitted)
+  ```
 
 ## Interpreting R-squared {.smaller}
 
@@ -384,19 +378,18 @@ Higher or lower RMSE?
 nc_fit_rsq <- round(glance(nc_fit)$r.squared * 100, 1)
 ```
 
-::: poll
+:::: poll
 🗳️ **Vote on Slack**
 
-The $R^2$ of the model for predicting uninsurance rate from high school graduation rate for NC counties is `r nc_fit_rsq`%.
-Which of the following is the correct interpretation of this value?
+The $R^2$ of the model for predicting uninsurance rate from high school graduation rate for NC counties is `r nc_fit_rsq`%. Which of the following is the correct interpretation of this value?
 
 ::: nonincremental
--   High school graduation rates correctly predict `r nc_fit_rsq`% of uninsurance rates in NC counties.
--   `r nc_fit_rsq`% of the variability in uninsurance rates in NC counties can be explained by high school graduation rates.
--   `r nc_fit_rsq`% of the variability in high school graduation rates in NC counties can be explained by uninsurance rates.
--   `r nc_fit_rsq`% of the time uninsurance rates in NC counties can be predicted by high school graduation rates.
+- High school graduation rates correctly predict `r nc_fit_rsq`% of uninsurance rates in NC counties.
+- `r nc_fit_rsq`% of the variability in uninsurance rates in NC counties can be explained by high school graduation rates.
+- `r nc_fit_rsq`% of the variability in high school graduation rates in NC counties can be explained by uninsurance rates.
+- `r nc_fit_rsq`% of the time uninsurance rates in NC counties can be predicted by high school graduation rates.
 :::
-:::
+::::
 
 ## Alternative approach for R-squared
 
@@ -411,63 +404,63 @@ glance(nc_fit)$r.squared
 
 ## RMSE
 
--   Ranges between 0 (perfect predictor) and infinity (terrible predictor)
+- Ranges between 0 (perfect predictor) and infinity (terrible predictor)
 
--   Same units as the outcome variable
+- Same units as the outcome variable
 
--   Calculate with `rmse()`:
+- Calculate with `rmse()`:
 
-    ```{r}
-    #| echo: true
+  ```{r}
+  #| echo: true
 
-    rmse(nc_aug, truth = uninsured, estimate = .fitted)
-    ```
+  rmse(nc_aug, truth = uninsured, estimate = .fitted)
+  ```
 
--   The value of RMSE is not very meaningful on its own, but it's useful for comparing across models (more on this when we get to regression with multiple predictors)
+- The value of RMSE is not very meaningful on its own, but it's useful for comparing across models (more on this when we get to regression with multiple predictors)
 
 ## Obtaining R-squared and RMSE {.smaller}
 
--   Use `rsq()` and `rmse()`, respectively
+- Use `rsq()` and `rmse()`, respectively
 
-    ```{r}
-    #| echo: true
-    #| eval: false
+  ```{r}
+  #| echo: true
+  #| eval: false
 
-    rsq(nc_aug, truth = uninsured, estimate = .fitted)
-    rmse(nc_aug, truth = uninsured, estimate = .fitted)
-    ```
+  rsq(nc_aug, truth = uninsured, estimate = .fitted)
+  rmse(nc_aug, truth = uninsured, estimate = .fitted)
+  ```
 
--   First argument: data frame containing `truth` and `estimate` columns
+- First argument: data frame containing `truth` and `estimate` columns
 
--   Second argument: name of the column containing `truth` (observed outcome)
+- Second argument: name of the column containing `truth` (observed outcome)
 
--   Third argument: name of the column containing `estimate` (predicted outcome)
+- Third argument: name of the column containing `estimate` (predicted outcome)
 
 ## Purpose of model evaluation
 
--   $R^2$ tells us how our model is doing to predict the data we *already have*
--   But generally we are interested in prediction for a new observation, not for one that is already in our sample, i.e. **out-of-sample prediction**
--   We have a couple ways of *simulating* out-of-sample prediction before actually getting new data to evaluate the performance of our models
+- $R^2$ tells us how our model is doing to predict the data we *already have*
+- But generally we are interested in prediction for a new observation, not for one that is already in our sample, i.e. **out-of-sample prediction**
+- We have a couple ways of *simulating* out-of-sample prediction before actually getting new data to evaluate the performance of our models
 
 # Splitting data
 
 ## Spending our data
 
--   There are several steps to create a useful model: parameter estimation, model selection, performance assessment, etc.
--   Doing all of this on the entire data we have available leaves us with no other data to assess our choices
--   We can allocate specific subsets of data for different tasks, as opposed to allocating the largest possible amount to the model parameter estimation only (which is what we've done so far)
+- There are several steps to create a useful model: parameter estimation, model selection, performance assessment, etc.
+- Doing all of this on the entire data we have available leaves us with no other data to assess our choices
+- We can allocate specific subsets of data for different tasks, as opposed to allocating the largest possible amount to the model parameter estimation only (which is what we've done so far)
 
 ## Simulation: data splitting {.smaller}
 
-::: columns
-::: {.column width="30%"}
+:::::: columns
+:::: {.column width="30%"}
 ::: nonincremental
--   Take a random sample of 10% of the data and set aside (testing data)
--   Fit a model on the remaining 90% of the data (training data)
--   Use the coefficients from this model to make predictions for the testing data
--   Repeat 10 times
+- Take a random sample of 10% of the data and set aside (testing data)
+- Fit a model on the remaining 90% of the data (training data)
+- Use the coefficients from this model to make predictions for the testing data
+- Repeat 10 times
 :::
-:::
+::::
 
 ::: {.column width="70%"}
 ```{r}
@@ -503,19 +496,19 @@ p_nc_fits <- ggplot(nc_fits, aes(x = hs_grad, y = .fitted, group = fold)) +
 p_nc_fits
 ```
 :::
-:::
+::::::
 
 ## Predictive performance {.smaller}
 
-::: columns
-::: {.column width="25%"}
-::: question
+::::::: columns
+::::: {.column width="25%"}
+:::: question
 ::: nonincremental
--   How consistent are the predictions for different testing datasets?
--   How consistent are the predictions for counties with high school graduation rates in the middle of the plot vs. in the edges?
+- How consistent are the predictions for different testing datasets?
+- How consistent are the predictions for counties with high school graduation rates in the middle of the plot vs. in the edges?
 :::
-:::
-:::
+::::
+:::::
 
 ::: {.column width="75%"}
 ```{r}
@@ -524,27 +517,27 @@ p_nc_fits
 p_nc_fits
 ```
 :::
-:::
+:::::::
 
 # Bootstrapping
 
 ## Bootstrapping our data {.smaller}
 
--   The idea behind bootstrapping is that if a given observation exists in a sample, there may be more like it in the population
--   With bootstrapping, we simulate resampling from the population by resampling from the sample we observed
--   Bootstrap samples are the sampled *with replacement* from the original sample and same size as the original sample
-    -   For example, if our sample consists of the observations {A, B, C}, bootstrap samples could be {A, A, B}, {A, C, A}, {B, C, C}, {A, B, C}, etc.
+- The idea behind bootstrapping is that if a given observation exists in a sample, there may be more like it in the population
+- With bootstrapping, we simulate resampling from the population by resampling from the sample we observed
+- Bootstrap samples are the sampled *with replacement* from the original sample and same size as the original sample
+  - For example, if our sample consists of the observations {A, B, C}, bootstrap samples could be {A, A, B}, {A, C, A}, {B, C, C}, {A, B, C}, etc.
 
 ## Simulation: bootstrapping {.smaller}
 
-::: columns
-::: {.column width="25%"}
+:::::: columns
+:::: {.column width="25%"}
 ::: nonincremental
--   Take a bootstrap sample -- sample with replacement from the original data, same size as the original data
--   Fit model to the sample and make predictions for that sample
--   Repeat many times
+- Take a bootstrap sample -- sample with replacement from the original data, same size as the original data
+- Fit model to the sample and make predictions for that sample
+- Repeat many times
 :::
-:::
+::::
 
 ::: {.column width="75%"}
 ```{r}
@@ -576,19 +569,19 @@ p_nc_boots <- ggplot(county_2019_nc_boots, aes(x = hs_grad, y = .fitted, group =
 p_nc_boots
 ```
 :::
-:::
+::::::
 
 ## Predictive performance {.smaller}
 
-::: columns
-::: {.column width="25%"}
-::: question
+::::::: columns
+::::: {.column width="25%"}
+:::: question
 ::: nonincremental
--   How consistent are the predictions for different bootstrap datasets?
--   How consistent are the predictions for counties with high school graduation rates in the middle of the plot vs. in the edges?
+- How consistent are the predictions for different bootstrap datasets?
+- How consistent are the predictions for counties with high school graduation rates in the middle of the plot vs. in the edges?
 :::
-:::
-:::
+::::
+:::::
 
 ::: {.column width="75%"}
 ```{r}
@@ -597,4 +590,4 @@ p_nc_boots
 p_nc_boots
 ```
 :::
-:::
+:::::::

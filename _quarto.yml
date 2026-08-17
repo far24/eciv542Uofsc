@@ -3,8 +3,8 @@ project:
 
 website:
   page-navigation: true
-  title: "STA 210 - Spring 2022"
-  description: "Homepage for STA 210 - Regression Analysis at Duke University, Spring 2022."
+  title: "ECIV352: Traffic Engineering"
+  description: "Homepage for ECIV 352: Traffic Engineering at UofSC, Fall 2026."
   site-url: "https://sta210-s22.github.io/website/"
 
   repo-url: https://github.com/sta210-s22/website

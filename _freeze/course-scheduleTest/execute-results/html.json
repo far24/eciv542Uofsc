@@ -1,0 +1,19 @@
+{
+  "hash": "87ed99be0e120448277e999453444a71",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"ECIV 542 (Fall 2026) Schedule\"\nformat: html\n---\n\n\n::: {.cell}\n::: {.cell-output-display}\n\n```{=html}\n<div class=\"reactable html-widget html-fill-item\" id=\"htmlwidget-8f8cadda5fdd9ed2b9c7\" style=\"width:auto;height:auto;\"></div>\n<script type=\"application/json\" data-for=\"htmlwidget-8f8cadda5fdd9ed2b9c7\">{\"x\":{\"tag\":{\"name\":\"Reactable\",\"attribs\":{\"data\":{\"Platform\":[\"GitHub\",\"RStudio\",\"LinkedIn\"],\"URL\":[\"https://github.com\",\"https://posit.co\",\"https://linkedin.com\"],\"Icon\":[\"??\",\"???\",\"??\"]},\"columns\":[{\"id\":\"Platform\",\"name\":\"Resource\",\"type\":\"character\",\"cell\":[{\"name\":\"a\",\"attribs\":{\"href\":\"https://github.com\",\"target\":\"_blank\",\"style\":{\"text-decoration\":\"none\",\"color\":\"#007bc0\",\"font-weight\":\"bold\",\"display\":\"inline-flex\",\"align-items\":\"center\",\"gap\":\"8px\"}},\"children\":[\"?? GitHub\"]},{\"name\":\"a\",\"attribs\":{\"href\":\"https://posit.co\",\"target\":\"_blank\",\"style\":{\"text-decoration\":\"none\",\"color\":\"#007bc0\",\"font-weight\":\"bold\",\"display\":\"inline-flex\",\"align-items\":\"center\",\"gap\":\"8px\"}},\"children\":[\"??? RStudio\"]},{\"name\":\"a\",\"attribs\":{\"href\":\"https://linkedin.com\",\"target\":\"_blank\",\"style\":{\"text-decoration\":\"none\",\"color\":\"#007bc0\",\"font-weight\":\"bold\",\"display\":\"inline-flex\",\"align-items\":\"center\",\"gap\":\"8px\"}},\"children\":[\"?? LinkedIn\"]}],\"html\":true},{\"id\":\"URL\",\"name\":\"URL\",\"type\":\"character\",\"show\":false},{\"id\":\"Icon\",\"name\":\"Icon\",\"type\":\"character\",\"show\":false}],\"highlight\":true,\"striped\":true,\"dataKey\":\"232a0057a44bc565c71a12f97b2b4e67\"},\"children\":[]},\"class\":\"reactR_markup\"},\"evals\":[],\"jsHooks\":[]}</script>\n```\n\n:::\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {
+      "include-in-header": [
+        "<script src=\"site_libs/core-js-2.5.3/shim.min.js\"></script>\n<script src=\"site_libs/react-18.2.0/react.min.js\"></script>\n<script src=\"site_libs/react-18.2.0/react-dom.min.js\"></script>\n<script src=\"site_libs/reactwidget-2.0.0/react-tools.js\"></script>\n<link href=\"site_libs/htmltools-fill-0.5.9/fill.css\" rel=\"stylesheet\" />\n<script src=\"site_libs/htmlwidgets-1.6.4/htmlwidgets.js\"></script>\n<link href=\"site_libs/reactable-0.4.5/reactable.css\" rel=\"stylesheet\" />\n<script src=\"site_libs/reactable-binding-0.4.5/reactable.js\"></script>\n"
+      ]
+    },
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

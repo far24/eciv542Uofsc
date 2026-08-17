@@ -5,9 +5,9 @@ website:
   page-navigation: true
   title: "ECIV352: Traffic Engineering"
   description: "Homepage for ECIV 352: Traffic Engineering at UofSC, Fall 2026."
-  site-url: "https://sta210-s22.github.io/website/"
+  #site-url: "https://sta210-s22.github.io/website/"
 
-  repo-url: https://github.com/sta210-s22/website
+  #repo-url: https://github.com/sta210-s22/website
   repo-actions: [edit, issue]
 
   open-graph: true

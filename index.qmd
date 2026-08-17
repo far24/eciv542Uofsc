@@ -14,5 +14,5 @@ about:
     - text: Email
       href: mailto:scsik@ucsb.edu
 ---
-        
-# page content excluded for brevity ~
+
+# page content excluded for brevity \~
